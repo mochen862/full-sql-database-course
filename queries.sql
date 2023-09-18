@@ -642,7 +642,7 @@ WHERE salary > 35000 AND coffeeshop_id IN ( -- US coffeeshop_id's
 );
 
 -- 30 day moving total pay
--- sum of all employees salaries before 30day of the current employee hire_date
+-- The inner query calculates the total_salary of employees who were hired "within" the 30-day period before the hire_date of the current employee
 SELECT
 	hire_date,
 	salary,
