@@ -5,9 +5,8 @@ DROP TABLE IF EXISTS shops CASCADE;
 DROP TABLE IF EXISTS locations CASCADE;
 DROP TABLE IF EXISTS suppliers CASCADE;
 
---==========================================================================
 
--- CREATE TABLES
+-- CREATE TABLES ========================================
 
 -- Create employees table 
 CREATE TABLE employees (
@@ -16,7 +15,7 @@ CREATE TABLE employees (
     last_name VARCHAR(50),
     email VARCHAR(50),
     hire_date DATE,
-    gender VARCHAR(1),
+    gender VARCHAR(1), -- "M"/"F" (male/female)
     salary INT,
     coffeeshop_id INT
 );
@@ -57,9 +56,8 @@ CREATE TABLE suppliers (
     ON DELETE CASCADE
 );
 
--- ===========================================
 
--- INSERT INTO TABLES
+-- INSERT INTO TABLES ====================================
 
 -- Insert first two entries into employees table
 -- Set the coffeeshop_id to NULL for now as we have not inserted the coffeeshop values into the shops table yet
@@ -87,8 +85,8 @@ WHERE coffeeshop_id = 1;
 INSERT INTO suppliers VALUES(1, 'Beans and Barley', 'Arabica');
 INSERT INTO suppliers VALUES(1, 'Cool Beans', 'Robusta');
 
---================================================================================
 
+-- copy and past the rest of code =================================
 -- NOW YOU CAN DO THE REST OF THE INSERT STATEMENTS
 
 -- Insert into the locations table
