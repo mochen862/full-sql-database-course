@@ -337,7 +337,7 @@ SELECT
   MAX(salary) - MIN(salary) as diff_sal,
   round(avg(salary), 0) as average_sal,
   sum(salary) as total_sal,
-  count(*) as num_of_emp,
+  count(*) as num_of_emp
 FROM employees;
 
 --=========================================================
